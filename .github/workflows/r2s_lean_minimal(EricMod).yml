@@ -1,4 +1,4 @@
-name: r2s Lean版openwrt minimal 
+name: r2s Lean版openwrt minimal(EricMod)
 
 on:
   push:
@@ -148,7 +148,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.sec_token }}
         with:
           tag_name: ${{ steps.assemble_artifact.outputs.release_tag }}
-          release_name: 发布 ${{ steps.assemble_artifact.outputs.release_tag }}
+          release_name: ${{ steps.assemble_artifact.outputs.release_tag }}
           draft: false
           prerelease: false
       - name: Upload Release Asset
